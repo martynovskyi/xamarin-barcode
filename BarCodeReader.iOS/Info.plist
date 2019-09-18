@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>BarCodeReader</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.motokyi.BarCodeReader</string>
+	<string>com.dev.motokyi.BarCodeReader</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>

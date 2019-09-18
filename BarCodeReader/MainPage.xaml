@@ -3,56 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              mc:Ignorable="d"
              x:Class="BarCodeReader.MainPage">
-    <StackLayout Padding="0,50,0,0">
-        <Label Text="BarCode Scanner ZXing"
-               HorizontalOptions="Center"
-               VerticalOptions="Start" />
 
-        <zxing:ZXingScannerView x:Name="BarcodeScanner"
-                                IsVisible="false"
-                                HeightRequest="300"
-                                OnScanResult="Handle_OnScanResult">
-        </zxing:ZXingScannerView>
-        <!-- Place new controls here -->
-
-        <Button Text="ZXing Scanner"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"
-                Clicked="OnCameraClickedAsync" />
-
-        <Switch HorizontalOptions="CenterAndExpand"
-                Toggled="Torch" />
-        <Grid Padding="8,0,0,0"
-              VerticalOptions="End">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Text="Result:"
-                   FontSize="Medium"
-                   Grid.Row="0"
-                   Grid.Column="0" />
-            <Label Text=".............................."
-                   FontSize="Medium"
-                   x:Name="resultLabel"
-                   Grid.Row="0"
-                   Grid.Column="1" />
-            <Label Text="Info:"
-                   FontSize="Medium"
-                   Grid.Row="1"
-                   Grid.Column="0" />
-            <Label Text="-"
-                   FontSize="Medium"
-                   x:Name="barcodeType"
-                   Grid.Row="1"
-                   Grid.Column="1" />
-        </Grid>
-    </StackLayout>
+    <ContentPage.Content>
+        <Button Text="Zxing" FontSize="Large" Clicked="OpenZxing"/>
+    </ContentPage.Content>
 </ContentPage>
